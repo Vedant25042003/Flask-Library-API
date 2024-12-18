@@ -96,6 +96,7 @@ def delete_member(member_id):
         return jsonify({'message': 'Member deleted'}), 200
     return jsonify({'error': 'Member not found'}), 404
 
+# route for search
 @app.route('/books/search', methods=['GET'])
 def search_books():
     query_title = request.args.get('title', '').lower()
